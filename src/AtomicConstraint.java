@@ -42,4 +42,9 @@ public class AtomicConstraint implements Constraint {
         else
             return clause;
     }
+    
+    public boolean equals( AtomicConstraint atom ) {
+    	return ( this.toString().equals( atom.toString() ) ) && ( this.isNegated() == atom.isNegated() );
+    }
+
 }
