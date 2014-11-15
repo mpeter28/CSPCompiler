@@ -14,6 +14,10 @@ public class AtomicConstraint implements Constraint {
     public boolean isNegated() {
         return negated;
     }
+    
+    public void toggleNegated(){
+    	this.negated = !this.negated;
+    }
 
     public String getClause() {
         return clause;
