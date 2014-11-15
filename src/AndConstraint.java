@@ -10,6 +10,11 @@ public class AndConstraint implements Constraint {
 		this.left = l;
 		this.right = r;
 	}
+    
+	@Override
+	public String toString() {
+		return "( " + left.toString() + " AND " + right.toString() + " )";
+	}
 	
     @Override
     public List<List<AtomicConstraint>> flatten() {

@@ -11,6 +11,11 @@ public class OrConstraint implements Constraint {
     }
 
     @Override
+    public String toString() {
+    	return "( " + leftConstraint.toString() + " OR " + rightConstraint.toString() 
+    			+ " )";
+    }
+    @Override
     public List<List<AtomicConstraint>> flatten() {
         List<List<AtomicConstraint>> flattenLeft = leftConstraint.flatten();
         List<List<AtomicConstraint>> flattenRight = rightConstraint.flatten();

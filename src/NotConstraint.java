@@ -6,6 +6,11 @@ public class NotConstraint implements Constraint {
 
     private Constraint toBeNegated;
 
+    @Override
+    public String toString() {
+    	return "NOT ( " + toBeNegated.toString() + " )";
+    }
+    
     public NotConstraint(Constraint toBeNegated) {
         this.toBeNegated = toBeNegated;
     }
