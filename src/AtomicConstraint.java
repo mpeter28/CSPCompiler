@@ -35,4 +35,11 @@ public class AtomicConstraint implements Constraint {
         return baseOr;
     }
 
+    @Override
+    public String toString() {
+        if (negated)
+            return "NOT " + clause;
+        else
+            return clause;
+    }
 }
